@@ -28,6 +28,7 @@ const useStorage = (file) => {
             collectionRef.add({ url: url, createdAt }); // the database will have the two properties ie. first Time of creation and the the Url of the image
             setUrl(url);
         });
+        
     },[file]);
 
     return { progress, url, error }
