@@ -16,7 +16,12 @@ const ImageGrid = ({ setSelectedImage }) => {
             .delete();
        }
    }
-    //console.log(docs);
+
+    const handleClick = (docUrl,e) => {
+        if(!e.target.classList.contains('closes')) {
+            setSelectedImage(docUrl);
+        }
+    };
 
     return(
         <div className = "img-grid">
@@ -26,7 +31,7 @@ const ImageGrid = ({ setSelectedImage }) => {
                     layout
                     className = "img-wrap" 
                     key={doc.id} 
-                    onClick = {() => setSelectedImage(doc.url)}
+                    onClick = {(e) => handleClick(doc.url,e)}
                 >
                     <span  className ="closes" title="Delete"
                         onClick = {(e) => deleteItem(doc.id,e)}
