@@ -6,7 +6,8 @@ const useFirestore = (collection) => {
     const [docs,setDocs] = useState([]);
 
     useEffect(() => {
-        const unsub = projectFirestore.collection(collection)
+        const unsub = projectFirestore
+            .collection(collection)
             .orderBy('createdAt', 'desc')
             .onSnapshot((snap) =>{
                 let documents = [];
@@ -16,11 +17,12 @@ const useFirestore = (collection) => {
                 setDocs(documents);
             });
 
-        return () => unsub();
+        return () => unsub();   //cleanup function
     },[collection]);
 
     return { docs }
-}
+};
+
 
 
 export default useFirestore;
