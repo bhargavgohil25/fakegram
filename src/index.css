@@ -4,6 +4,7 @@
   --primary: #e99d97;
   --secondary: #4e4e4e;
   --error: #ff4a4a;
+  --shadow: rgba(0,0,0,0.5);
 }
 
 /* base styles & title */
@@ -80,6 +81,7 @@ label:hover{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 40px;
+  object-fit: cover;
 }
 
 .img-wrap{
@@ -100,9 +102,29 @@ label:hover{
   top: 0;
   left: 0;
   transition: all 0.45s;
+  object-fit: cover;
 }
 
-img:hover{
+.img-wrap img:hover{
   transform: scale(1.04);
-  overflow: visible;
+  
+}
+
+/* Modal */
+.backdrop{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  transition: all 0.4s;
+}
+
+.backdrop img{
+  display: block;
+  max-width: 60%;
+  max-height: 80%;
+  margin: 60px auto;
+  box-shadow: 3px 5px 7px rgba(0,0,0,0.5);
 }
