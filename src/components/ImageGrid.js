@@ -19,6 +19,7 @@ const ImageGrid = ({ setSelectedImage }) => {
                     key={doc.id} 
                     onClick = {() => setSelectedImage(doc.url)}
                 >
+                    <span  class="closes" title="Delete">&times;</span>
                     <motion.img src = {doc.url} alt = "uploaded pic"
                         initial = {{opacity: 0}}
                         animate = {{opacity: 1}}
