@@ -131,6 +131,9 @@ label:hover{
   opacity: 1;
 }
 
+.closes:hover{
+  transform: scale(1.2);
+}
 
 
 /* Modal */
