@@ -1,13 +1,22 @@
 import React from 'react'
 import useFirestore from '../hooks/useFirestore'
 import { motion } from 'framer-motion'
-
+import { projectFirestore } from '../firebase/config'
 
 const ImageGrid = ({ setSelectedImage }) => {
 
     const { docs } = useFirestore('images');
 
-    console.log(docs);
+   const deleteItem = (id,e) => {
+       if(e.target.className === 'closes'){
+        setSelectedImage(null);
+            projectFirestore
+            .collection('images')
+            .doc(id)
+            .delete();
+       }
+   }
+    //console.log(docs);
 
     return(
         <div className = "img-grid">
@@ -19,7 +28,9 @@ const ImageGrid = ({ setSelectedImage }) => {
                     key={doc.id} 
                     onClick = {() => setSelectedImage(doc.url)}
                 >
-                    <span  class="closes" title="Delete">&times;</span>
+                    <span  className ="closes" title="Delete"
+                        onClick = {(e) => deleteItem(doc.id,e)}
+                    >&times;</span>
                     <motion.img src = {doc.url} alt = "uploaded pic"
                         initial = {{opacity: 0}}
                         animate = {{opacity: 1}}
