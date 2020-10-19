@@ -11,7 +11,7 @@ A Simple Animated App To Upload Images made in Firebase to store and delete the 
 Clone the repo and install the dependencies 
 
 ```bash
-git clone https://github.com/Bhargav252000/fake-gram.git
+git clone https://github.com/Bhargav252000/fakegram.git
 cd fake-gram
 
 npm install
