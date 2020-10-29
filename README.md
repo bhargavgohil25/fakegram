@@ -7,7 +7,7 @@ A Simple Animated App To Upload Images made in Firebase to store and delete the 
 * framer-motion
 
 #### View Live Demo
-<pre><center><a href="https://bhargav-gohil.is-a.dev/pizza-maker/"><b>bhargav-gohil.is-a.dev/pizza-maker/</b></a></center></pre>
+<pre><center><a href="https://bhargav-gohil.is-a.dev/fakegram/"><b>bhargav-gohil.is-a.dev/fakegram/</b></a></center></pre>
 
 
 ## Setup
