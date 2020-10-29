@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/fakegram/static/css/main.ce4f0451.chunk.css",
+    "main.js": "/fakegram/static/js/main.8897702b.chunk.js",
+    "main.js.map": "/fakegram/static/js/main.8897702b.chunk.js.map",
+    "runtime-main.js": "/fakegram/static/js/runtime-main.cd4a38cd.js",
+    "runtime-main.js.map": "/fakegram/static/js/runtime-main.cd4a38cd.js.map",
+    "static/js/2.318f2104.chunk.js": "/fakegram/static/js/2.318f2104.chunk.js",
+    "static/js/2.318f2104.chunk.js.map": "/fakegram/static/js/2.318f2104.chunk.js.map",
+    "index.html": "/fakegram/index.html",
+    "precache-manifest.64d269a64ee9f6f81601ef521e652149.js": "/fakegram/precache-manifest.64d269a64ee9f6f81601ef521e652149.js",
+    "service-worker.js": "/fakegram/service-worker.js",
+    "static/css/main.ce4f0451.chunk.css.map": "/fakegram/static/css/main.ce4f0451.chunk.css.map",
+    "static/js/2.318f2104.chunk.js.LICENSE.txt": "/fakegram/static/js/2.318f2104.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cd4a38cd.js",
+    "static/js/2.318f2104.chunk.js",
+    "static/css/main.ce4f0451.chunk.css",
+    "static/js/main.8897702b.chunk.js"
+  ]
+}
