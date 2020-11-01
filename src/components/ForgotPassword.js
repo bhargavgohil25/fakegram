@@ -2,6 +2,40 @@ import React, { useRef, useState } from 'react'
 import { Card, Button, Form, Alert } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import { useAuth } from '../contexts/AuthContext'
+import { motion } from 'framer-motion'
+
+
+const buttonVariants = {
+    hover:{
+        scale:1.06,
+        transition: {
+            duration:0.3,
+        },
+        textShadow: "0px 0px 8px rgb(255,255,255)",
+        boxShadow:"0px 0px 8px rgb(255,255,255)",
+    }
+}
+
+const containerVariants = {
+    hidden: {
+        x: '100vw',
+        opacity: 0
+    },
+    visible: {
+        opacity:1,
+        x:0,
+        transition:{
+            type:"spring",
+            delay: 0.5
+        }
+    },
+    exit:{
+        x: '-100vh',
+        transition:{
+            ease: 'easeInOut'
+        }
+    }
+}
 
 export default function ForgotPasaword() {
 
@@ -31,9 +65,13 @@ export default function ForgotPasaword() {
 
     return (
         <>  
-            <Card>
+            <motion.Card
+                variants={containerVariants}
+                initial = "hidden"
+                animate = "visible"
+            >
                 <Card.Body>
-                    <h2 className= "text-center mb-4">Password Reset</h2>
+                    <h2 className= "text-center mb-4" style={{color: "#4e4e4e"}}>Password Reset</h2>
     
                     {error && <Alert variant="danger">{error}</Alert>}
                     {message && <Alert variant= "success">{message}</Alert> }
@@ -44,16 +82,18 @@ export default function ForgotPasaword() {
                             <Form.Control type="email" ref={emailRef} required />
                         </Form.Group>
     
-                        <Button disabled={loading} className="w-100" type="submit" color=" #ff4a4a">
+                        <motion.button disabled={loading} className="w-100" type="submit"
+                            variants={buttonVariants}
+                            whileHover="hover"
+                        >
                             Reset Password
-                        </Button>
+                        </motion.button>
                     </Form>
                     <div className = "w-100 text-center mt-2">
                         <Link to="/login">Login</Link>
                     </div>
-
                 </Card.Body>
-            </Card>
+            </motion.Card>
             <div className = "w-100 text-center mt-2">
                 Create New Account ? <Link to="/signup">Sign Up</Link>
             </div>   
