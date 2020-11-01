@@ -1,23 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap');
 
-:root{
-  --primary: #e99d97;
-  --secondary: #4e4e4e;
-  --error: #ff4a4a;
-  --shadow: rgba(0,0,0,0.5);
-}
 
 /* base styles & title */
 body{
   font-family: 'Comfortaa', cursive;
-  color: var(--secondary);
+  color: #4e4e4e;
 }
 .App{
   max-width: 960px;
-  margin: 0 auto;
+  margin: 5px auto;
 }
 .title h1{
-  color: var(--primary);
+  color: #e99d97;
   font-size: 1.2rem;
   letter-spacing: 2px;
   font-weight: normal;
@@ -33,43 +27,26 @@ body{
  /* Upload Portion */
  
 form{
-  margin: 30px auto 10px;
-  text-align: center;
+  margin: 30px auto 10px; 
 }
 label input{
   height: 0;
   width: 0;
   opacity: 0;
 }
-label{
-  display: block;
-  width: 30px;
-  height: 30px;
-  border: 1px solid var(--primary);
-  border-radius: 50%;
-  margin: 10px auto;
-  line-height: 30px;
-  color: var(--primary);
-  font-weight: bold;
-  font-size: 24px;
-}
-label:hover{
-  background: var(--primary);
-  color: white;
-}
 .output{
   height: 60px;
   font-size: 0.8rem;
 }
 .error{
-  color: var(--error);
+  color: #ff4a4a;
 }
 
 /* Progress Bar Styling */
 
 .progress-bar{
   height: 5px;
-  background: var(--primary);
+  background: #e99d97;
   margin-top: 20px;
 }
 
@@ -153,4 +130,23 @@ label:hover{
   max-height: 80%;
   margin: 60px auto;
   box-shadow: 3px 5px 7px rgba(0,0,0,0.5);
+}
+
+
+.btn-primary,
+.btn-primary:active,
+.btn-primary:visited {
+  background-color: #e75b5b !important;
+  max-width: 200px;
+  margin-left: 270px;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #ff4a4a !important;
+  transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
 }
