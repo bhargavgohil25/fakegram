@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
-import { Button, Alert } from 'react-bootstrap'
+import { Alert } from 'react-bootstrap'
 import { useAuth } from '../contexts/AuthContext'
 import Title from './Title'
 import UploadForm from './UploadForm'

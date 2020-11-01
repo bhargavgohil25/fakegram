@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Signup from './components/SignUp'
 import Login from './components/Login'
 import UpdateProfile from './components/UpdateProfile'
