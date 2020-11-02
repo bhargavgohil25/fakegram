@@ -50,7 +50,7 @@ label span{
 
 .progress-bar{
   height: 5px;
-  background: #e99d97;
+  background: #e99d97 !important;
   margin-top: 20px;
 }
 

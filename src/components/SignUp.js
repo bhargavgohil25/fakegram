@@ -87,7 +87,7 @@ export default function Signup() {
                     <h2 className= "text-center mb-4" style={{color: "#4e4e4e"}}>Sign Up</h2>
     
                     {error && <Alert variant="danger">{error}</Alert>}
-                    <Form onSubmit = {handleSubmit}>
+                    <Form onSubmit = {handleSubmit} style={{maxWidth: "450px"}}>
                         <Form.Group id="email"> 
                             <Form.Label>Email</Form.Label>
                             <Form.Control type="email" ref={emailRef} required />
@@ -103,6 +103,7 @@ export default function Signup() {
                         <motion.button disabled={loading} className="w-100" type="submit"
                             variants={buttonVariants}
                             whileHover = "hover"
+                            whileTap={{ scale: 0.9, x: "-2px", y: "4px" }}
                         >
                             Sign Up
                         </motion.button>
@@ -110,7 +111,7 @@ export default function Signup() {
                 </Card.Body>
             </motion.Card>
             <div className = "w-100 text-center mt-2">
-                Already Have An Account ? <Link to="/login">Log In</Link>
+                Already Have An Account ? <Link to="/login" style={{color: "#444"}}>Log In</Link>
             </div>   
         </>
     )

@@ -69,6 +69,7 @@ export default function ForgotPasaword() {
                 variants={containerVariants}
                 initial = "hidden"
                 animate = "visible"
+                exit="exit"
             >
                 <Card.Body>
                     <h2 className= "text-center mb-4" style={{color: "#4e4e4e"}}>Password Reset</h2>
@@ -76,7 +77,7 @@ export default function ForgotPasaword() {
                     {error && <Alert variant="danger">{error}</Alert>}
                     {message && <Alert variant= "success">{message}</Alert> }
                     
-                    <Form onSubmit = {handleSubmit}>
+                    <Form onSubmit = {handleSubmit} style={{maxWidth: "450px"}}>
                         <Form.Group id="email"> 
                             <Form.Label>Email</Form.Label>
                             <Form.Control type="email" ref={emailRef} required />
@@ -85,6 +86,7 @@ export default function ForgotPasaword() {
                         <motion.button disabled={loading} className="w-100" type="submit"
                             variants={buttonVariants}
                             whileHover="hover"
+                            whileTap={{ scale: 0.9, x: "-2px", y: "4px" }}
                         >
                             Reset Password
                         </motion.button>
@@ -95,7 +97,7 @@ export default function ForgotPasaword() {
                 </Card.Body>
             </motion.Card>
             <div className = "w-100 text-center mt-2">
-                Create New Account ? <Link to="/signup">Sign Up</Link>
+                Create New Account ? <Link to="/signup" style={{color: "#444"}}>Sign Up</Link>
             </div>   
         </>
     )

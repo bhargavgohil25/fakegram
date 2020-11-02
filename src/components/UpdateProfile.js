@@ -89,12 +89,13 @@ export default function UpdateProfile() {
                 variants={containerVariants}
                 initial = "hidden"
                 animate = "visible"
+                exit = "exit"
             >
                 <Card.Body>
                     <h2 className= "text-center mb-4" style={{color: "#4e4e4e"}}>Update Profile</h2>
     
                     {error && <Alert variant="danger">{error}</Alert>}
-                    <Form onSubmit = {handleSubmit}>
+                    <Form onSubmit = {handleSubmit} style={{maxWidth: "450px"}}>
                         <Form.Group id="email"> 
                             <Form.Label>Email</Form.Label>
                             <Form.Control type="email" ref={emailRef} required defaultValue={currentUser.email}/>
@@ -110,6 +111,7 @@ export default function UpdateProfile() {
                         <motion.button disabled={loading} className="w-100" type="submit"
                             variants={buttonVariants}
                             whileHover="hover"
+                            whileTap={{ scale: 0.9, x: "-2px", y: "4px" }}
                         >
                             Update
                         </motion.button>
@@ -121,6 +123,7 @@ export default function UpdateProfile() {
                         <motion.button 
                             variants = {buttonVariants}
                             whileHover = "hover"
+                            whileTap={{ scale: 0.9, x: "-2px", y: "4px" }}
                         >
                             Cancel
                         </motion.button>

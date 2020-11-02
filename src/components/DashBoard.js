@@ -7,7 +7,7 @@ import UploadForm from './UploadForm'
 import ImageGrid from './ImageGrid'
 import Modal from './Modal'
 import { motion } from 'framer-motion'
-
+import Grid from '@material-ui/core/Grid'
 
 const buttonVariants = {
     hover:{
@@ -63,6 +63,7 @@ export default function DashBoard() {
                 variants={containerVariants}
                 initial= "hidden"
                 animate= "visible" 
+                exit="exit"
             >
                 {error && <Alert variant="danger">{error}</Alert>}
                 <Title />
@@ -70,23 +71,32 @@ export default function DashBoard() {
                 <ImageGrid setSelectedImage ={setSelectedImage}/>
                 { selectedImage && <Modal selectedImage = {selectedImage} setSelectedImage={setSelectedImage}/>}
                 <div className = "w-100 text-center mt-2 next">
-                    <Link to="/update">
-                        <motion.button 
-                            variants = {buttonVariants}
-                            whileHover = "hover"
-                        >
-                            Update Profile
-                        </motion.button>
-                    </Link>
+                    <Grid container>
+                        <Grid items xs={6}>
+                            <Link to="/update">
+                                <motion.button 
+                                    variants = {buttonVariants}
+                                    whileHover = "hover"
+                                    whileTap={{ scale: 0.9, x: "-2px", y: "4px" }}
+                                >
+                                    Update Profile
+                                </motion.button>
+                            </Link>
+                        </Grid>
+                        <Grid items xs={6}>
+                            <motion.button 
+                                onClick={handleLogout} 
+                                variants= {buttonVariants}
+                                whileHover= "hover"
+                                whileTap={{ scale: 0.9, x: "-2px", y: "4px" }}
+                            >
+                                Log Out
+                            </motion.button>
+                        </Grid>
+                    </Grid>    
                 </div>
                 <div className = "w-100 text-center mt-2 next">
-                    <motion.button 
-                        onClick={handleLogout} 
-                        variants= {buttonVariants}
-                        whileHover= "hover"
-                    >
-                        Log Out
-                    </motion.button>
+                    
                 </div>
             </div>
             

@@ -8,7 +8,7 @@ import ForgotPassword from './components/ForgotPassword'
 
 import { Container } from 'react-bootstrap'
 import { AuthProvider } from './contexts/AuthContext'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
 
 
@@ -24,6 +24,7 @@ function App() {
                     <Router>
                         <AuthProvider>
                             <Switch>
+                                <Route exact path="/fakegram" component={() => (<Redirect to='/login' />)} />
                                 <PrivateRoute exact path="/" component={DashBoard}/>
                                 <PrivateRoute  path="/update" component={UpdateProfile}/>
                                 <Route path="/signup" component={Signup}/>

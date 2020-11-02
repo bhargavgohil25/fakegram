@@ -4,7 +4,6 @@ import { Link, useHistory } from 'react-router-dom'
 import { useAuth } from '../contexts/AuthContext'
 import { motion } from 'framer-motion'
 
-
 const buttonVariants = {
     hover:{
         scale:1.06,
@@ -37,7 +36,7 @@ const containerVariants = {
     }
 }
 
-
+       
 export default function Login() {
 
     const emailRef = useRef();
@@ -77,10 +76,10 @@ export default function Login() {
                 exit="exit"
             >
                 <Card.Body>
-                    <h2 className= "text-center mb-4" style={{color: "#4e4e4e"}}>Log In</h2>
+                    <h2 className= "text-center mb-4" style={{color: "#4e4e4e"}} >Log In</h2>
     
                     {error && <Alert variant="danger">{error}</Alert>}
-                    <Form onSubmit = {handleSubmit}>
+                    <Form onSubmit = {handleSubmit} style={{maxWidth: "450px"}}>
                         <Form.Group id="email"> 
                             <Form.Label>Email</Form.Label>
                             <Form.Control type="email" ref={emailRef} required />
@@ -92,6 +91,7 @@ export default function Login() {
                         <motion.button disabled={loading} className="w-100 mt-2" type="submit"
                             variants={buttonVariants}
                             whileHover="hover"
+                            whileTap={{ scale: 0.9, x: "-2px", y: "4px" }}
                         >
                             Log In
                         </motion.button>
@@ -101,6 +101,7 @@ export default function Login() {
                         <motion.button 
                             variants = {buttonVariants}
                             whileHover = "hover"
+                            whileTap={{ scale: 0.9, x: "-2px", y: "4px" }}
                         >
                             Forgot Password
                         </motion.button>
@@ -111,14 +112,7 @@ export default function Login() {
             </motion.Card>
             <div className = "w-100 text-center mt-2">
                 Create New Account ? 
-                <Link to="/signup">
-                    <motion.button 
-                        variants = {buttonVariants}
-                        whileHover = "hover"
-                    >
-                        Signup
-                    </motion.button>
-                </Link>
+                <Link to="/signup" style={{color: "#444"}}>Sign Up</Link>
             </div>   
         </>
     )
