@@ -75,7 +75,7 @@ export default function Signup() {
     return (
         <>  
             <div className="heading">
-                <h1>Fakegram</h1>
+                <h1>FakeGram</h1>
             </div>
             <motion.Card
                 variants={containerVariants}
