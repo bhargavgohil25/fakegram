@@ -1,0 +1,40 @@
+.animatedTextContainer{
+    --maskX: 0;
+    --maskY: 0;
+    position: relative;
+    cursor: default;
+    user-select: none;
+  }
+  
+  .animatedTextContent{
+    font-size: 70px;
+    font-weight: 1000;
+    letter-spacing: 1.4px;
+    line-height: 1.1;
+    text-shadow: 5px 3px 8px rgba(255, 255, 255, 0.5);
+    margin: 0;
+  }
+  
+  .animatedTextContentClone{
+    composes : animatedTextContent; 
+    position : absolute;
+    left: 0;
+    top: 0;
+    color: #ffffff;
+    transition: all 0.4s ease-out;
+    clip-path: polygon(
+        0 0,
+        calc(var(--maskX) * 1% + (var(--maskY) - 50) * 0.4%) 0,
+        calc(var(--maskX) * 1% + (var(--maskY) - 50) * -0.4%) 100%,
+        0 100%
+    );
+  }
+
+  @media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .animatedTextContent{
+        font-size: 45px;
+    }
+ }

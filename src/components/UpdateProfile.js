@@ -3,7 +3,7 @@ import { Card, Form, Alert } from 'react-bootstrap'
 import { Link, useHistory } from 'react-router-dom'
 import { useAuth } from '../contexts/AuthContext'
 import { motion } from 'framer-motion'
-
+import { AnimatedText } from '../AnimatedText/AnimatedText'
 
 const buttonVariants = {
     hover:{
@@ -83,7 +83,12 @@ export default function UpdateProfile() {
     return (
         <>  
             <div className="heading">
-                <h1>FakeGram</h1>
+                <AnimatedText
+                    textColor = "#ff4a4a"
+                    overlayColor = "#ffa62b"
+                >
+                    FakeGram
+                </AnimatedText>
             </div>
             <motion.Card
                 variants={containerVariants}

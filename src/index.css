@@ -12,7 +12,8 @@ body{
   margin: 5px auto;
 }
 .title h1{
-  color: #e99d97;
+  color: #ff4a4a;
+  opacity: 0.92;
   font-size: 1.2rem;
   letter-spacing: 2px;
   font-weight: normal;
@@ -163,7 +164,7 @@ button {
   border: 1px solid white;
   margin: 50px auto 0;
   cursor: pointer;
-  opacity: 0.7;
+  opacity: 0.97;
   max-width: fit-content !important ; 
 }
 
@@ -176,8 +177,12 @@ button {
   margin-top: -50px;
 }
 
-.heading h1{
-  font-weight: 900;
-  letter-spacing: 1px;
-  font-size: 70px;
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .button{
+      font-size: 0.1em !important;
+      padding: 2px 18px !important;
+    }
 }
