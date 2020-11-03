@@ -71,7 +71,7 @@ export default function ForgotPasaword() {
                 animate = "visible"
                 exit="exit"
             >
-                <Card.Body>
+                <Card.Body style={{margin:"auto",borderRadius: "15px", boxShadow:"5px 3px 8px rgba(0, 0,0, 0.5)",width:"550px" }}>
                     <h2 className= "text-center mb-4" style={{color: "#4e4e4e"}}>Password Reset</h2>
     
                     {error && <Alert variant="danger">{error}</Alert>}

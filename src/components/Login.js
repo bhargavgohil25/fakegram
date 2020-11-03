@@ -19,7 +19,8 @@ const buttonVariants = {
 const containerVariants = {
     hidden: {
         x: '100vw',
-        opacity: 0
+        opacity: 0,
+
     },
     visible: {
         opacity:1,
@@ -67,7 +68,7 @@ export default function Login() {
 
     return (
         <>  
-            <div className="heading">
+            <div className="heading" style={{opacity:"0.88"}}>
                 <AnimatedText
                     textColor = "#ff4a4a"
                     overlayColor = "#ffa62b"
@@ -81,7 +82,7 @@ export default function Login() {
                 animate= "visible"
                 exit="exit"
             >
-                <Card.Body>
+                <Card.Body style={{margin:"auto",borderRadius: "15px", boxShadow:"5px 3px 8px rgba(0, 0,0, 0.5)",width:"550px" }}>
                     <h2 className= "text-center mb-4" style={{color: "#4e4e4e"}} >Log In</h2>
     
                     {error && <Alert variant="danger">{error}</Alert>}

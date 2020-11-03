@@ -82,7 +82,7 @@ export default function UpdateProfile() {
 
     return (
         <>  
-            <div className="heading">
+            <div className="heading" style={{opacity:"0.88"}} >
                 <AnimatedText
                     textColor = "#ff4a4a"
                     overlayColor = "#ffa62b"
@@ -96,7 +96,7 @@ export default function UpdateProfile() {
                 animate = "visible"
                 exit = "exit"
             >
-                <Card.Body>
+                <Card.Body style={{margin:"auto",borderRadius: "15px", boxShadow:"5px 3px 8px rgba(0, 0,0, 0.5)",width:"550px" }}>
                     <h2 className= "text-center mb-4" style={{color: "#4e4e4e"}}>Update Profile</h2>
     
                     {error && <Alert variant="danger">{error}</Alert>}
