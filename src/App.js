@@ -21,7 +21,7 @@ function App() {
             style={{ minHeight: "100vh" , fontFamily: "Comfortaa"}}
             >
                 <div className = "w-100" style = {{ maxWidth:"800px" }}>
-                    <Router>
+                    <Router basename={process.env.PUBLIC_URL}>
                         <AuthProvider>
                             <Switch>
                                 <Route exact path="/fakegram" component={() => (<Redirect to='/login' />)} />
