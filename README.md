@@ -5,6 +5,10 @@ A Simple Animated App To Upload Images made in Firebase to store and delete the 
 
 * firebase
 * framer-motion
+* react-router-dom
+* @material-ui/core
+* boostrap
+* react-bootstrap
 
 #### View Live Demo
 <pre><center><a href="https://bhargav-gohil.is-a.dev/fakegram/"><b>bhargav-gohil.is-a.dev/fakegram/</b></a></center></pre>
@@ -21,6 +25,9 @@ cd fake-gram
 npm install
 npm install firebase
 npm install framer-motion
+npm install react-router-dom
+npm install @material-ui/core
+npm install boostrap react-bootstrap
 ```
 To run the app, simply write
 
