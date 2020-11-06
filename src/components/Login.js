@@ -4,6 +4,7 @@ import { Link, useHistory } from 'react-router-dom'
 import { useAuth } from '../contexts/AuthContext'
 import { motion } from 'framer-motion'
 import { AnimatedText } from '../AnimatedText/AnimatedText'
+import ParticlesBg from 'particles-bg'
 
 const buttonVariants = {
     hover:{
@@ -68,6 +69,7 @@ export default function Login() {
 
     return (
         <>  
+            <ParticlesBg color="#ffa62b" type="cobweb" bg={true}/>
             <div className="heading" style={{opacity:"0.88"}}>
                 <AnimatedText
                     textColor = "#ff4a4a"

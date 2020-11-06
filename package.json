@@ -11,12 +11,16 @@
     "bootstrap": "^4.5.3",
     "firebase": "^7.22.1",
     "framer-motion": "^2.7.9",
+    "framework7": "^5.7.13",
+    "framework7-react": "^5.7.13",
+    "particles-bg": "^2.5.0",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-bootstrap": "^1.4.0",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.3"
+    "react-scripts": "3.4.3",
+    "react-tiny-fab": "^4.0.2"
   },
   "scripts": {
     "start": "react-scripts start",
