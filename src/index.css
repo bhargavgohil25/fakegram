@@ -12,7 +12,7 @@ body{
 }
 .title h1{
   color: #ff4a4a;
-  opacity: 0.92;
+  opacity: 0.7;
   font-size: 1.2rem;
   letter-spacing: 2px;
   font-weight: normal;
@@ -163,7 +163,7 @@ button {
   border: 1px solid white;
   margin: 50px auto 0;
   cursor: pointer;
-  opacity: 0.8;
+  opacity: 0.5;
   max-width: fit-content !important ; 
 }
 
