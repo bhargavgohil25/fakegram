@@ -70,7 +70,7 @@ export default function Login() {
     return (
         <>  
             <ParticlesBg color="#ffa62b" type="cobweb" bg={true}/>
-            <div className="heading" style={{opacity:"0.88"}}>
+            <div className="heading" style={{opacity:"0.9"}}>
                 <AnimatedText
                     textColor = "#ff4a4a"
                     overlayColor = "#ffa62b"
