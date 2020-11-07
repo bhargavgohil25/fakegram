@@ -36,6 +36,12 @@ const ImageGrid = ({ setSelectedImage }) => {
                     <span  className ="closes" title="Delete"
                         onClick = {(e) => deleteItem(doc.id,e)}
                     >&times;</span>
+                    <span className="likes" title="Like"
+                    
+                    >
+    
+                    </span>
+
                     <motion.img src = {doc.url} alt = "uploaded pic"
                         initial = {{opacity: 0}}
                         animate = {{opacity: 1}}
