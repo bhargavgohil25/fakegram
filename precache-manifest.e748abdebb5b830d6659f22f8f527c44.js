@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "10f514a2f220414aa8d842e6c5242f1d",
+    "revision": "78ea73f06c25071e8f8888cd5870e081",
     "url": "/fakegram/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/fakegram/static/css/2.2a86faee.chunk.css"
   },
   {
-    "revision": "cd4add5d76638ff7d4b2",
-    "url": "/fakegram/static/css/main.be65ffc9.chunk.css"
+    "revision": "a05699037cf7c9e5dd17",
+    "url": "/fakegram/static/css/main.bcfa031a.chunk.css"
   },
   {
     "revision": "1f64c5b51f0a648491f7",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/fakegram/static/js/2.4a0af09c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "cd4add5d76638ff7d4b2",
-    "url": "/fakegram/static/js/main.a29b9fc8.chunk.js"
+    "revision": "a05699037cf7c9e5dd17",
+    "url": "/fakegram/static/js/main.ecb56672.chunk.js"
   },
   {
     "revision": "0ee28624aefbe0a996cf",
